@@ -39,4 +39,9 @@ void main(void)
 		getchar();
 	}
 
+	if (position > 60)
+	{
+		printf("축하합니다! 은하수에 도착했습니다!\n");
+	}
+
 }

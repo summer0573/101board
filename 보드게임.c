@@ -22,12 +22,10 @@ void main(void)
 
 	//주사위 1~6
 	int dice;
-	
 	srand(time(0));
-
 	printf("현재 위치 : %d\n\n", position);
 
-
+			//첫번째 던짐
 	// 주사위는 1 ~ 6까지 나오게 설정
 	dice = rand() % 6 + 1;
 	printf("주사위를 던져서 %d 이/가 나왔습니다.\n", dice);
@@ -35,5 +33,19 @@ void main(void)
 	//던진 주사위 값을 현재 위치에 적용
 	position += dice;
 	printf("현재 위치 : %d\n\n", position);
+	getchar();
+
+
+
+
+			//두번째 던짐
+	// 주사위는 1 ~ 6까지 나오게 설정
+	dice = rand() % 6 + 1;
+	printf("주사위를 던져서 %d 이/가 나왔습니다.\n", dice);
+
+	//던진 주사위 값을 현재 위치에 적용
+	position += dice;
+	printf("현재 위치 : %d\n\n", position);
+	getchar();
 
 }

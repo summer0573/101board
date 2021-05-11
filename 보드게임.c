@@ -20,7 +20,9 @@ void main(void)
 	//플레이어의 위치((0부터 시작
 	int position = 0;
 
-	srand(time(0));
-	int dice = rand();
-	printf("%d\n", rand());
+	//주사위 1~6
+	int dice;
+	dice = rand() % 6 + 1;
+
+	printf("%d\n", dice);
 }

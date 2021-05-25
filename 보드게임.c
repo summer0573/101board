@@ -22,26 +22,39 @@ void main(void)
 
 	//주사위 1~6
 	int dice;
+	//시작 2억
+	long long money = 2000000000;
 	srand(time(0));
-	printf("현재 위치 : %d\n\n", position);
+
+	printf("현재 위치 : %d, 현재 금액 : %lld \n\n", position, money);
 
 	//무한반복
 	while (1)
 	{
-		//던짐
-// 주사위는 1 ~ 6까지 나오게 설정
+		//엔터 누르면 계속
+	getchar();
+
+
+	// 주사위는 1 ~ 6까지 나오게 설정
 		dice = rand() % 6 + 1;
 		printf("주사위를 던져서 %d 이/가 나왔습니다.\n", dice);
 
 		//던진 주사위 값을 현재 위치에 적용
 		position += dice;
-		printf("현재 위치 : %d\n\n", position);
-		getchar();
+		printf("현재 위치 : %d , 현재 금액 : %lld \n\n", position, money);
+
+
+
+
+		if (position > 60)
+		{
+
+			printf("축하합니다! 은하수에 도착했습니다!\n");
+			break;
+		}
+	
 	}
 
-	if (position > 60)
-	{
-		printf("축하합니다! 은하수에 도착했습니다!\n");
-	}
+	
 
 }

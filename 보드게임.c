@@ -43,35 +43,32 @@ void main(void)
 		position += dice;
 		printf("현재 위치 : %d , 현재 금액 : %lld \n\n", position, money);
 
-		if (position == 59)
-		{
-			printf("위치 59에 있을시 처음 지점으로 돌아갑니다.");
-			position = 0;
-			printf("현재 위치 : %d , 현재 금액 : %lld \n\n", position, money);
-		}
 		
-		if (position == 20)
+		switch (position)
 		{
-			printf("기부 천사! 재산의 20%%를 사회에 기부합니다");
+		case 20:
+			printf("[[기부 천사! 재산의 20%%를 사회에 기부합니다]]");
 			money = (long long)(money * 0.8);
 			printf("현재 위치 : %d, 현재 금액 : %lld \n\n", position, money);
-		}
-		
-		if (position == 30)
-		{
-			printf("던진 주사위의 2배만큼 나아갑니다.\n");
+			break;
+
+		case 30:
+			printf("[[던진 주사위의 2배만큼 나아갑니다.]]\n");
 			position += dice;
 			printf("현재 위치 : %d, 현재 금액 : %lld \n\n", position, money);
-		}
-
-
-		if (position >= 60)
-		{
-
-			printf("축하합니다! 은하수에 도착했습니다!\n");
 			break;
+
+		case 59:
+			printf("[[위치 59에 있을시 처음 지점으로 돌아갑니다.]]");
+			position = 0;
+			printf("현재 위치 : %d , 현재 금액 : %lld \n\n", position, money);
+			break;
+
+		case 60:
+			printf("[[축하합니다! 은하수에 도착했습니다!]]\n");
+			break;
+
 		}
-	
 	}
 
 	

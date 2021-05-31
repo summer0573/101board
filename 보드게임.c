@@ -57,8 +57,12 @@ void main(void)
 			printf("현재 위치 : %d, 현재 금액 : %lld \n\n", position, money);
 		}
 		
-
-
+		if (position == 30)
+		{
+			printf("던진 주사위의 2배만큼 나아갑니다.\n");
+			position += dice;
+			printf("현재 위치 : %d, 현재 금액 : %lld \n\n", position, money);
+		}
 
 
 		if (position >= 60)

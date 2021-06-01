@@ -53,9 +53,9 @@ void main(void)
 			printf("[[주사위를 한 번 더 던집니다.]] \n");
 			printf("[나온 수 x 100000 을 얻게 됩니다.]] \n");
 			getchar();
-			dice = rand() % 6 + 1;
-			money += 100000 * dice;
-			printf("주사위 %d이 나와서 %d원을 획득하였습니다. \n\n",dice, 100000 * dice);
+			int dice_money = rand() % 6 + 1;
+			money += 100000 * dice_money;
+			printf("주사위 %d이 나와서 %d원을 획득하였습니다. \n\n",dice_money, 100000 * dice_money);
 			printf("현재위치 : %d, 현재금액 : %lld \n\n", position, money);
 			break;
 

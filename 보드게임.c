@@ -47,6 +47,18 @@ void main(void)
 		
 		switch (position)
 		{
+			//TODO:printf 중복된 코드 제거하기
+
+		case 10:
+			printf("[[주사위를 한 번 더 던집니다.]] \n");
+			printf("[나온 수 x 100000 을 얻게 됩니다.]] \n");
+			getchar();
+			dice = rand() % 6 + 1;
+			money += 100000 * dice;
+			printf("주사위 %d이 나와서 %d원을 획득하였습니다. \n\n",dice, 100000 * dice);
+			printf("현재위치 : %d, 현재금액 : %lld \n\n", position, money);
+			break;
+
 		case 20:
 			printf("[[기부 천사! 재산의 20%%를 사회에 기부합니다]]\n\n");
 			money = (long long)(money * 0.8);

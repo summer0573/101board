@@ -50,7 +50,7 @@ void main(void)
 			//TODO:printf 중복된 코드 제거하기
 
 		case 10:
-			printf("[[주사위를 한 번 더 던집니다.]] \n");
+			printf("[[도박! 위치 10일 때, 주사위를 한 번 더 던집니다.]] \n");
 			printf("[나온 수 x 100000 을 얻게 됩니다.]] \n");
 			getchar();
 			int dice_money = rand() % 6 + 1;
@@ -60,22 +60,30 @@ void main(void)
 			break;
 
 		case 20:
-			printf("[[기부 천사! 재산의 20%%를 사회에 기부합니다]]\n\n");
+			printf("[[기부 천사! 위치 20일 때, 재산의 20%%를 사회에 기부합니다]]\n\n");
 			money = (long long)(money * 0.8);
 			printf("현재 위치 : %d, 현재 금액 : %d \n\n", position, money);
 			break;
 
 		case 30:
-			printf("[[던진 주사위의 수 만큼 더 나아갑니다.]]\n\n");
+			printf("[[점프! 위치 30일 때, 던진 주사위의 수 만큼 더 나아갑니다.]]\n\n");
 			position += dice;
 			printf("현재 위치 : %d, 현재 금액 : %d \n\n", position, money);
 			break;
 
 		case 59:
-			printf("[[위치 59에 있을시 처음 지점으로 돌아갑니다.]]\n\n");
+			printf("[[블랙홀! 위치 59에 있을시 처음 지점으로 돌아갑니다.]]\n\n");
 			position = 0;
 			printf("현재 위치 : %d , 현재 금액 : %d \n\n", position, money);
 			break;
+
+		case 60:
+			printf("[[축하합니다! 위치 60에 있을 시, 소지금이 2배가 됩니다!]]");
+			money *= 2;
+			printf(">>%d원을 얻었습니다.<<",money);
+			printf("현재 위치 : %d , 현재 금액 : %d \n\n", position, money);
+			break;
+
 		}
 
 

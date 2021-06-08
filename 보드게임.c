@@ -53,7 +53,7 @@ void main(void)
 			//TODO:printf 중복된 코드 제거하기
 
 		case 10:
-			printf("[[도박! 위치 10일 때, 주사위를 한 번 더 던집니다.]] \n");
+			printf("[[지원금 도착! 위치 10일 때, 주사위를 한 번 더 던집니다.]] \n");
 			printf("[나온 수 x 100000 을 얻게 됩니다.]] \n");
 			getchar();
 			int dice_money = rand() % 6 + 1;
@@ -63,16 +63,38 @@ void main(void)
 			break;
 
 		case 20:
-			printf("[[기부 천사! 위치 20일 때, 재산의 20%%를 사회에 기부합니다]]\n\n");
+			printf("[[기부 천사! 위치 20일 때, 재산의 20%%를 우주정거장에 기부합니다]]\n\n");
 			money = (long long)(money * 0.8);
 			printf("현재 위치 : %d, 현재 금액 : %d \n\n", position, money);
 			break;
 
 		case 30:
-			printf("[[점프! 위치 30일 때, 던진 주사위의 수 만큼 더 나아갑니다.]]\n\n");
+			printf("[[조종기가 고장! 위치 30일 때, 던진 주사위의 수 만큼 더 나아갑니다.]]\n\n");
 			position += dice;
 			printf("현재 위치 : %d, 현재 금액 : %d \n\n", position, money);
 			break;
+
+		case 49: //3턴 동안 움직이지 못함.
+			printf("[[불시착! 엔진이 고장 났습니다. 3턴 동안 움직일 수 없습니다.]]\n");
+			printf("[[주사위 3이 나올 시, 본부의 지원이 도착합니다.]]\n");
+			for (int i = 1; i <= 3; i++)
+			{
+				getchar();
+				printf("%d 턴 입니다\n",i);
+				dice = rand() % 6 + 1;
+				//주사위를 던져서 3이 나오면 탈출
+				printf("주사위가 %d이 나왔습니다.\n\n", dice);
+
+				if (dice == 3)
+				{
+					printf("3이 나왔습니다. 본부의 지원이 도착했습니다.\n");
+					break;
+				}
+			}
+			printf("엔진을 성공적으로 고쳤습니다.\n");
+			printf("현재 위치 : %d, 현재 금액 : %d \n\n", position, money);
+			break;
+
 
 		case 59:
 			printf("[[블랙홀! 위치 59에 있을시 처음 지점으로 돌아갑니다.]]\n\n");

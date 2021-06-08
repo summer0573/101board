@@ -2,8 +2,15 @@
 
 void main(void)
 {
-	printf("1 \n");
-	printf("2 \n");
+	for (int a = 1; a <= 10; a++)
+	{
+		printf("%d ", a);
+	}
+
+
+
+
+	/*printf("2 \n");
 	printf("3 \n");
 	printf("4 \n");
 	printf("5 \n");
@@ -11,5 +18,5 @@ void main(void)
 	printf("7 \n");
 	printf("8 \n");
 	printf("9 \n");
-	printf("10 \n");
+	printf("10 \n");*/
 }

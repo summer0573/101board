@@ -23,6 +23,9 @@ void main(void)
 	//주사위 1~6
 	int dice;
 
+	//공간의 끝 점
+	const int finish = 60;
+
 	//시작 2억
 	int money = 20000000;
 	srand(time(0));
@@ -55,7 +58,7 @@ void main(void)
 			getchar();
 			int dice_money = rand() % 6 + 1;
 			money += 100000 * dice_money;
-			printf("주사위 %d이 나와서 %d원을 획득하였습니다. \n\n",dice_money, 100000 * dice_money);
+			printf("주사위 %d이 나와서 %d원을 획득하였습니다. \n\n", dice_money, 100000 * dice_money);
 			printf("현재위치 : %d, 현재금액 : %d \n\n", position, money);
 			break;
 
@@ -76,22 +79,22 @@ void main(void)
 			position = 0;
 			printf("현재 위치 : %d , 현재 금액 : %d \n\n", position, money);
 			break;
-
-		case 60:
-			printf("[[축하합니다! 위치 60에 있을 시, 소지금이 2배가 됩니다!]]");
-			money *= 2;
-			printf(">>%d원을 얻었습니다.<<",money);
-			printf("현재 위치 : %d , 현재 금액 : %d \n\n", position, money);
-			break;
-
 		}
 
 
-		if (position>=60)
+		if (position == finish)
+		{
+			printf("[[축하합니다! 위치 끝 점에 있을 시, 소지금이 2배가 됩니다!]]\n\n");
+			money *= 2;
+			printf(">>%d원을 얻었습니다.<<\n", money);
+			printf("현재 위치 : %d , 현재 금액 : %d \n\n", position, money);
+		}
+
+
+		if (position>=finish)
 		{
 			printf("[[축하합니다! 은하수에 도착했습니다!]]\n");
 			break;
-
 		}
 	}
 

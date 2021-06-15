@@ -20,14 +20,16 @@ void main(void)
 	{
 		if (dan == 4)
 		{
-			break;
+			continue; //바깥쪽 for문에 대한 continue(4단만 skip)
+			//break; //바깥쪽 for문에 대한 break (단은 3까지만)
 		}
 
 		for (int a = 1; a <= 9; a++)
 		{
-			if (a == 4)
+			if (a == 5)
 			{
-				break;
+				continue; //안쪽 for문에 대한 continue(수 5만 skip)
+				//break; //안쪽 for문에 대한 break (수는 4까지만)
 			}
 			printf("%d x %d = %d\n", dan, a, dan * a);
 		}

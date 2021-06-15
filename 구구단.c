@@ -18,8 +18,17 @@ void main(void)
 
 	for (int dan = 2; dan <= 9; dan++)
 	{
+		if (dan == 4)
+		{
+			break;
+		}
+
 		for (int a = 1; a <= 9; a++)
 		{
+			if (a == 4)
+			{
+				break;
+			}
 			printf("%d x %d = %d\n", dan, a, dan * a);
 		}
 		printf("\n");

@@ -5,22 +5,23 @@ float average(int a, int b, int c);
 
 void main(void)
 {
+	float avg;		//평균
+	int sub[3];		//과목
 
-	int C_score;
 	printf("씨언어 점수를 입력하시오 : ");
-	scanf("%d", &C_score);
-	cal_grade(C_score);
+	scanf("%d", &sub[0]);
+	cal_grade(sub[0]);
 
-	int JAVA_score;
 	printf("자바 점수를 입력하시오 : ");
-	scanf("%d", &JAVA_score);
-	cal_grade(JAVA_score);
+	scanf("%d", &sub[1]);
+	cal_grade(sub[1]);
 
 	int CP_score;
 	printf("컴퓨터 구조 점수를 입력하시오 : ");
-	scanf("%d", &CP_score);
-	cal_grade(CP_score);
-	float avg = average(C_score, JAVA_score, CP_score);
+	scanf("%d", &sub[2]);
+	cal_grade(sub[2]);
+
+	avg = average(sub[0], sub[1], sub[2]);
 
 	printf("점수의 평균은 %f점 입니다.", avg);
 }
